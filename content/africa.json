@@ -1,0 +1,207 @@
+{
+  "packName": "Africa",
+  "language": "en",
+  "version": 1,
+  "items": [
+    {
+      "topic": "Nigeria",
+      "statements": [
+        { "text": "Nigeria has the largest population in Africa", "truth": true },
+        { "text": "Lagos is a major city in Nigeria", "truth": true },
+        { "text": "Nigeria’s capital is Lagos", "truth": false }
+      ],
+      "difficulty": 2,
+      "tags": ["west_africa", "cities"]
+    },
+    {
+      "topic": "South Africa",
+      "statements": [
+        { "text": "South Africa has 11 official languages", "truth": true },
+        { "text": "Johannesburg is the country’s largest city by population", "truth": true },
+        { "text": "Johannesburg is the capital of South Africa", "truth": false }
+      ],
+      "difficulty": 2,
+      "tags": ["southern_africa", "sa"]
+    },
+    {
+      "topic": "Nile",
+      "statements": [
+        { "text": "The Nile flows north", "truth": true },
+        { "text": "Egypt is in Africa", "truth": true },
+        { "text": "The Nile starts in Morocco", "truth": false }
+      ],
+      "difficulty": 2,
+      "tags": ["north_africa", "rivers"]
+    },
+    {
+      "topic": "Sahara",
+      "statements": [
+        { "text": "The Sahara is the world’s largest hot desert", "truth": true },
+        { "text": "It lies in North Africa", "truth": true },
+        { "text": "The Sahara covers all of Africa", "truth": false }
+      ],
+      "difficulty": 1,
+      "tags": ["deserts", "north_africa"]
+    },
+    {
+      "topic": "Kilimanjaro",
+      "statements": [
+        { "text": "Mount Kilimanjaro is in Tanzania", "truth": true },
+        { "text": "It is Africa’s highest mountain", "truth": true },
+        { "text": "It erupts every year", "truth": false }
+      ],
+      "difficulty": 2,
+      "tags": ["east_africa", "mountains"]
+    },
+    {
+      "topic": "Lakes",
+      "statements": [
+        { "text": "Lake Victoria is Africa’s largest lake by area", "truth": true },
+        { "text": "It borders Uganda, Kenya, and Tanzania", "truth": true },
+        { "text": "It is the deepest lake in the world", "truth": false }
+      ],
+      "difficulty": 2,
+      "tags": ["lakes", "east_africa"]
+    },
+    {
+      "topic": "Madagascar",
+      "statements": [
+        { "text": "Madagascar is an island nation", "truth": true },
+        { "text": "It lies off Africa’s east coast", "truth": true },
+        { "text": "It is connected to the mainland by a land bridge", "truth": false }
+      ],
+      "difficulty": 1,
+      "tags": ["islands", "indian_ocean"]
+    },
+    {
+      "topic": "Ethiopia",
+      "statements": [
+        { "text": "Addis Ababa is Ethiopia’s capital", "truth": true },
+        { "text": "The African Union’s HQ is in Addis Ababa", "truth": true },
+        { "text": "Ethiopia uses the Euro as its currency", "truth": false }
+      ],
+      "difficulty": 2,
+      "tags": ["east_africa", "cities"]
+    },
+    {
+      "topic": "Kenya",
+      "statements": [
+        { "text": "Nairobi is Kenya’s capital", "truth": true },
+        { "text": "The Maasai Mara is in Kenya", "truth": true },
+        { "text": "Kenya is in West Africa", "truth": false }
+      ],
+      "difficulty": 1,
+      "tags": ["east_africa", "wildlife"]
+    },
+    {
+      "topic": "Ghana",
+      "statements": [
+        { "text": "Accra is the capital of Ghana", "truth": true },
+        { "text": "Ghana is a major cocoa producer", "truth": true },
+        { "text": "Ghana is landlocked", "truth": false }
+      ],
+      "difficulty": 1,
+      "tags": ["west_africa", "cities"]
+    },
+    {
+      "topic": "Morocco",
+      "statements": [
+        { "text": "Morocco borders Spain via enclaves across the Strait of Gibraltar", "truth": true },
+        { "text": "The Atlas Mountains are partly in Morocco", "truth": true },
+        { "text": "Morocco is in Southern Africa", "truth": false }
+      ],
+      "difficulty": 2,
+      "tags": ["north_africa", "mountains"]
+    },
+    {
+      "topic": "DR Congo",
+      "statements": [
+        { "text": "The Congo River runs through the DRC", "truth": true },
+        { "text": "The DRC is rich in minerals like cobalt", "truth": true },
+        { "text": "The capital of DRC is Kisangani", "truth": false }
+      ],
+      "difficulty": 2,
+      "tags": ["central_africa", "rivers"]
+    },
+    {
+      "topic": "Rwanda",
+      "statements": [
+        { "text": "Rwanda is called the ‘Land of a Thousand Hills’", "truth": true },
+        { "text": "Kigali is the capital of Rwanda", "truth": true },
+        { "text": "Rwanda is larger than Algeria", "truth": false }
+      ],
+      "difficulty": 1,
+      "tags": ["east_africa", "cities"]
+    },
+    {
+      "topic": "Seychelles",
+      "statements": [
+        { "text": "Seychelles is Africa’s smallest country by area", "truth": true },
+        { "text": "It is an island nation", "truth": true },
+        { "text": "Seychelles is in the Atlantic Ocean", "truth": false }
+      ],
+      "difficulty": 1,
+      "tags": ["islands", "indian_ocean"]
+    },
+    {
+      "topic": "Lesotho",
+      "statements": [
+        { "text": "Lesotho is completely surrounded by South Africa", "truth": true },
+        { "text": "It is a high-altitude country", "truth": true },
+        { "text": "Lesotho has a coastline", "truth": false }
+      ],
+      "difficulty": 2,
+      "tags": ["southern_africa"]
+    },
+    {
+      "topic": "Namibia",
+      "statements": [
+        { "text": "The Namib Desert is in Namibia", "truth": true },
+        { "text": "The Skeleton Coast is part of Namibia", "truth": true },
+        { "text": "Namibia’s capital is Windhoek Bay", "truth": false }
+      ],
+      "difficulty": 2,
+      "tags": ["southern_africa", "deserts"]
+    },
+    {
+      "topic": "Botswana",
+      "statements": [
+        { "text": "Botswana’s Okavango Delta is world-famous", "truth": true },
+        { "text": "Botswana is known for diamond mining", "truth": true },
+        { "text": "The Okavango River flows into the Atlantic Ocean", "truth": false }
+      ],
+      "difficulty": 2,
+      "tags": ["southern_africa", "rivers"]
+    },
+    {
+      "topic": "Zimbabwe & Zambia",
+      "statements": [
+        { "text": "Victoria Falls is on the Zambezi River", "truth": true },
+        { "text": "It sits on the border of Zimbabwe and Zambia", "truth": true },
+        { "text": "Victoria Falls is Africa’s tallest mountain", "truth": false }
+      ],
+      "difficulty": 1,
+      "tags": ["southern_africa", "waterfalls"]
+    },
+    {
+      "topic": "Uganda",
+      "statements": [
+        { "text": "Kampala is Uganda’s capital", "truth": true },
+        { "text": "Lake Victoria touches Uganda", "truth": true },
+        { "text": "Uganda is south of South Africa", "truth": false }
+      ],
+      "difficulty": 1,
+      "tags": ["east_africa", "lakes"]
+    },
+    {
+      "topic": "Tunisia",
+      "statements": [
+        { "text": "Tunis is the capital of Tunisia", "truth": true },
+        { "text": "Carthage is an ancient city located in modern Tunisia", "truth": true },
+        { "text": "Tunisia is landlocked", "truth": false }
+      ],
+      "difficulty": 1,
+      "tags": ["north_africa", "history"]
+    }
+  ]
+}

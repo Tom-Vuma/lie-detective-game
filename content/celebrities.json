@@ -1,0 +1,207 @@
+{
+  "packName": "Celebrities",
+  "language": "en",
+  "version": 1,
+  "items": [
+    {
+      "topic": "Music & Tech",
+      "statements": [
+        { "text": "Beyoncé was a member of Destiny’s Child", "truth": true },
+        { "text": "Rihanna is from Barbados", "truth": true },
+        { "text": "Elon Musk founded Amazon", "truth": false }
+      ],
+      "difficulty": 1,
+      "tags": ["music", "tech"]
+    },
+    {
+      "topic": "Film & Action",
+      "statements": [
+        { "text": "Dwayne Johnson was a professional wrestler", "truth": true },
+        { "text": "Jackie Chan performs many of his own stunts", "truth": true },
+        { "text": "Keanu Reeves is British", "truth": false }
+      ],
+      "difficulty": 2,
+      "tags": ["film"]
+    },
+    {
+      "topic": "SA Stars",
+      "statements": [
+        { "text": "Trevor Noah hosted The Daily Show", "truth": true },
+        { "text": "Charlize Theron has won an Academy Award", "truth": true },
+        { "text": "Trevor Noah is from Nigeria", "truth": false }
+      ],
+      "difficulty": 2,
+      "tags": ["south_africa", "tv", "film"]
+    },
+    {
+      "topic": "Sports Legends",
+      "statements": [
+        { "text": "Cristiano Ronaldo is Portuguese", "truth": true },
+        { "text": "Lionel Messi is Argentine", "truth": true },
+        { "text": "Serena Williams is a professional soccer player", "truth": false }
+      ],
+      "difficulty": 1,
+      "tags": ["sports"]
+    },
+    {
+      "topic": "Afrobeats",
+      "statements": [
+        { "text": "Burna Boy is Nigerian", "truth": true },
+        { "text": "Wizkid is Ghanaian", "truth": false },
+        { "text": "Davido is Nigerian", "truth": true }
+      ],
+      "difficulty": 2,
+      "tags": ["music", "africa"]
+    },
+    {
+      "topic": "Award Winners",
+      "statements": [
+        { "text": "Lupita Nyong’o is Kenyan-Mexican", "truth": true },
+        { "text": "Daniel Kaluuya has won an Academy Award", "truth": true },
+        { "text": "Lupita Nyong’o has won a Grammy for Best Rap Album", "truth": false }
+      ],
+      "difficulty": 3,
+      "tags": ["film", "awards"]
+    },
+    {
+      "topic": "Pop Stars",
+      "statements": [
+        { "text": "Adele is a British singer", "truth": true },
+        { "text": "Taylor Swift is an American singer-songwriter", "truth": true },
+        { "text": "Taylor Swift’s first album was called ‘Red’", "truth": false }
+      ],
+      "difficulty": 2,
+      "tags": ["music"]
+    },
+    {
+      "topic": "Tech Founders",
+      "statements": [
+        { "text": "Elon Musk co-founded Tesla", "truth": true },
+        { "text": "He founded SpaceX", "truth": true },
+        { "text": "He was born in Canada", "truth": false }
+      ],
+      "difficulty": 2,
+      "tags": ["tech"]
+    },
+    {
+      "topic": "Hollywood",
+      "statements": [
+        { "text": "Will Smith won an Academy Award in 2022", "truth": true },
+        { "text": "Jada Pinkett Smith is an actress", "truth": true },
+        { "text": "Will Smith starred in Titanic", "truth": false }
+      ],
+      "difficulty": 2,
+      "tags": ["film"]
+    },
+    {
+      "topic": "Athletes",
+      "statements": [
+        { "text": "Michael Jordan is famous for basketball", "truth": true },
+        { "text": "LeBron James is a basketball player", "truth": true },
+        { "text": "Usain Bolt is a professional swimmer", "truth": false }
+      ],
+      "difficulty": 1,
+      "tags": ["sports"]
+    },
+    {
+      "topic": "Talk Shows",
+      "statements": [
+        { "text": "Oprah Winfrey is a legendary talk show host", "truth": true },
+        { "text": "Ellen DeGeneres is a comedian and host", "truth": true },
+        { "text": "Oprah Winfrey is from Australia", "truth": false }
+      ],
+      "difficulty": 1,
+      "tags": ["tv"]
+    },
+    {
+      "topic": "Global Pop",
+      "statements": [
+        { "text": "Shakira is Colombian", "truth": true },
+        { "text": "Shakira is a singer and performer", "truth": true },
+        { "text": "Shakira is famous for playing cricket", "truth": false }
+      ],
+      "difficulty": 1,
+      "tags": ["music"]
+    },
+    {
+      "topic": "UK Stars",
+      "statements": [
+        { "text": "Ed Sheeran is a British singer-songwriter", "truth": true },
+        { "text": "He is known for playing acoustic guitar", "truth": true },
+        { "text": "Ed Sheeran’s natural hair color is black", "truth": false }
+      ],
+      "difficulty": 1,
+      "tags": ["music", "uk"]
+    },
+    {
+      "topic": "Young Stars",
+      "statements": [
+        { "text": "Zendaya stars in ‘Euphoria’", "truth": true },
+        { "text": "Tom Holland plays Spider-Man", "truth": true },
+        { "text": "Zendaya is a professional boxer", "truth": false }
+      ],
+      "difficulty": 1,
+      "tags": ["tv", "film"]
+    },
+    {
+      "topic": "SA Music",
+      "statements": [
+        { "text": "Black Coffee is a South African DJ", "truth": true },
+        { "text": "DJ Maphorisa is a South African producer", "truth": true },
+        { "text": "Black Coffee is a famous chef", "truth": false }
+      ],
+      "difficulty": 2,
+      "tags": ["music", "south_africa"]
+    },
+    {
+      "topic": "North & West Africa",
+      "statements": [
+        { "text": "Angelique Kidjo is a Beninese singer", "truth": true },
+        { "text": "Youssou N’Dour is a Senegalese singer", "truth": true },
+        { "text": "Burna Boy is from Kenya", "truth": false }
+      ],
+      "difficulty": 2,
+      "tags": ["music", "africa"]
+    },
+    {
+      "topic": "Football",
+      "statements": [
+        { "text": "Mohamed Salah is Egyptian", "truth": true },
+        { "text": "Sadio Mané is Senegalese", "truth": true },
+        { "text": "Kylian Mbappé is Brazilian", "truth": false }
+      ],
+      "difficulty": 1,
+      "tags": ["sports", "football"]
+    },
+    {
+      "topic": "SA Hollywood",
+      "statements": [
+        { "text": "Charlize Theron was born in South Africa", "truth": true },
+        { "text": "She starred in ‘Mad Max: Fury Road’", "truth": true },
+        { "text": "Charlize Theron is a professional pilot", "truth": false }
+      ],
+      "difficulty": 2,
+      "tags": ["film", "south_africa"]
+    },
+    {
+      "topic": "Action Icons",
+      "statements": [
+        { "text": "Jackie Chan is from Hong Kong", "truth": true },
+        { "text": "He is known for martial arts films", "truth": true },
+        { "text": "Jackie Chan never performs stunts", "truth": false }
+      ],
+      "difficulty": 1,
+      "tags": ["film", "action"]
+    },
+    {
+      "topic": "Rap & TV",
+      "statements": [
+        { "text": "Drake is a Canadian rapper", "truth": true },
+        { "text": "He appeared in ‘Degrassi’", "truth": true },
+        { "text": "Drake’s real name is Drake Drake", "truth": false }
+      ],
+      "difficulty": 1,
+      "tags": ["music", "tv"]
+    }
+  ]
+}

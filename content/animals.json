@@ -1,0 +1,207 @@
+{
+  "packName": "Animals",
+  "language": "en",
+  "version": 1,
+  "items": [
+    {
+      "topic": "Wildlife",
+      "statements": [
+        { "text": "Hippos kill more people than lions in Africa", "truth": true },
+        { "text": "Cheetahs cannot roar", "truth": true },
+        { "text": "Elephants hatch from eggs", "truth": false }
+      ],
+      "difficulty": 2,
+      "tags": ["africa", "animals"]
+    },
+    {
+      "topic": "Birds",
+      "statements": [
+        { "text": "Penguins can jump up to about 2 meters", "truth": true },
+        { "text": "Ostriches cannot fly", "truth": true },
+        { "text": "All birds have teeth", "truth": false }
+      ],
+      "difficulty": 2,
+      "tags": ["birds"]
+    },
+    {
+      "topic": "Marine",
+      "statements": [
+        { "text": "Dolphins can sleep with one eye open", "truth": true },
+        { "text": "Blue whales are the largest animals on Earth", "truth": true },
+        { "text": "Whales breathe through gills", "truth": false }
+      ],
+      "difficulty": 2,
+      "tags": ["ocean"]
+    },
+    {
+      "topic": "Mammals",
+      "statements": [
+        { "text": "Bats are mammals", "truth": true },
+        { "text": "Elephants cannot jump", "truth": true },
+        { "text": "All mammals lay eggs", "truth": false }
+      ],
+      "difficulty": 1,
+      "tags": ["mammals"]
+    },
+    {
+      "topic": "Big Cats",
+      "statements": [
+        { "text": "Tigers have striped skin, not just striped fur", "truth": true },
+        { "text": "Lions live in social groups called prides", "truth": true },
+        { "text": "Cheetahs hunt mainly at night like lions", "truth": false }
+      ],
+      "difficulty": 2,
+      "tags": ["big_cats"]
+    },
+    {
+      "topic": "Adaptations",
+      "statements": [
+        { "text": "Giraffes have seven neck vertebrae like humans", "truth": true },
+        { "text": "Polar bears have black skin under their fur", "truth": true },
+        { "text": "Camels store water in their humps", "truth": false }
+      ],
+      "difficulty": 3,
+      "tags": ["adaptations"]
+    },
+    {
+      "topic": "Cephalopods",
+      "statements": [
+        { "text": "Octopuses have three hearts", "truth": true },
+        { "text": "Squids have a beak-like mouthpart", "truth": true },
+        { "text": "Octopuses have internal skeletons", "truth": false }
+      ],
+      "difficulty": 3,
+      "tags": ["ocean"]
+    },
+    {
+      "topic": "Marsupials",
+      "statements": [
+        { "text": "Koalas are marsupials", "truth": true },
+        { "text": "Kangaroo joeys develop in a pouch", "truth": true },
+        { "text": "Marsupials lay eggs", "truth": false }
+      ],
+      "difficulty": 1,
+      "tags": ["australia"]
+    },
+    {
+      "topic": "Seahorses",
+      "statements": [
+        { "text": "Male seahorses carry the young", "truth": true },
+        { "text": "Seahorses are fish", "truth": true },
+        { "text": "Seahorses are fast swimmers", "truth": false }
+      ],
+      "difficulty": 2,
+      "tags": ["ocean"]
+    },
+    {
+      "topic": "Owls",
+      "statements": [
+        { "text": "Owls can rotate their heads about 270 degrees", "truth": true },
+        { "text": "Many owls are nocturnal", "truth": true },
+        { "text": "Owls can spin their heads a full 360 degrees", "truth": false }
+      ],
+      "difficulty": 2,
+      "tags": ["birds"]
+    },
+    {
+      "topic": "Reptiles",
+      "statements": [
+        { "text": "Crocodiles have one of the most powerful bites in the animal kingdom", "truth": true },
+        { "text": "Some crocodiles swallow stones (gastroliths)", "truth": true },
+        { "text": "Crocodiles produce milk for their young", "truth": false }
+      ],
+      "difficulty": 3,
+      "tags": ["reptiles"]
+    },
+    {
+      "topic": "Snakes",
+      "statements": [
+        { "text": "Snakes use their tongues to help them smell", "truth": true },
+        { "text": "Snakes dislocate their jaws to eat large prey", "truth": false },
+        { "text": "Snake jaws can open wide due to flexible ligaments", "truth": true }
+      ],
+      "difficulty": 3,
+      "tags": ["reptiles"]
+    },
+    {
+      "topic": "Insects",
+      "statements": [
+        { "text": "Honeybees perform a waggle dance to communicate", "truth": true },
+        { "text": "Honeybees produce honey", "truth": true },
+        { "text": "All bees can sting multiple times without dying", "truth": false }
+      ],
+      "difficulty": 2,
+      "tags": ["insects"]
+    },
+    {
+      "topic": "Ants",
+      "statements": [
+        { "text": "Ants live in colonies with specialized roles", "truth": true },
+        { "text": "Some ants can lift many times their body weight", "truth": true },
+        { "text": "All ants have wings throughout their lives", "truth": false }
+      ],
+      "difficulty": 1,
+      "tags": ["insects"]
+    },
+    {
+      "topic": "Bird Intelligence",
+      "statements": [
+        { "text": "Parrots can mimic human speech", "truth": true },
+        { "text": "Ravens can solve complex puzzles", "truth": true },
+        { "text": "Birds have actual teeth", "truth": false }
+      ],
+      "difficulty": 3,
+      "tags": ["birds"]
+    },
+    {
+      "topic": "Sharks",
+      "statements": [
+        { "text": "Sharks have multiple rows of teeth", "truth": true },
+        { "text": "Whale sharks are the largest fish", "truth": true },
+        { "text": "Sharks are mammals", "truth": false }
+      ],
+      "difficulty": 2,
+      "tags": ["ocean"]
+    },
+    {
+      "topic": "Arachnids",
+      "statements": [
+        { "text": "Spiders have eight legs", "truth": true },
+        { "text": "Some spiders can jump impressive distances", "truth": true },
+        { "text": "All spiders spin webs", "truth": false }
+      ],
+      "difficulty": 2,
+      "tags": ["arachnids"]
+    },
+    {
+      "topic": "Amphibians",
+      "statements": [
+        { "text": "Many frogs absorb water through their skin", "truth": true },
+        { "text": "Toads are a type of frog", "truth": true },
+        { "text": "All frogs are poisonous", "truth": false }
+      ],
+      "difficulty": 2,
+      "tags": ["amphibians"]
+    },
+    {
+      "topic": "Rhinoceros",
+      "statements": [
+        { "text": "A rhino’s horn is made mostly of keratin", "truth": true },
+        { "text": "Some rhinos have two horns", "truth": true },
+        { "text": "Rhino horns are made of bone", "truth": false }
+      ],
+      "difficulty": 2,
+      "tags": ["africa", "mammals"]
+    },
+    {
+      "topic": "Horses",
+      "statements": [
+        { "text": "Horses can sleep standing up", "truth": true },
+        { "text": "Foals are baby horses", "truth": true },
+        { "text": "Horses have six legs", "truth": false }
+      ],
+      "difficulty": 1,
+      "tags": ["mammals"]
+    }
+  ]
+}
