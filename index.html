@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Lie Detective – Subsystem 1 Test</title>
+    <title>Lie Detective – Subsystem 1 & 2 Test</title>
+
     <style>
         body {
             font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
@@ -21,6 +22,7 @@
             padding: 16px;
             max-width: 700px;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+            margin-bottom: 24px;
         }
 
         label {
@@ -80,10 +82,64 @@
             max-height: 280px;
             overflow: auto;
         }
+
+        .statement-btn {
+            padding: 14px 18px;
+            border-radius: 12px;
+            background: #181C23;
+            border: 1px solid #232833;
+            color: #fff !important;
+            text-align: left;
+            cursor: pointer;
+            min-height: 48px;
+            font-size: 16px;
+            line-height: 1.3;
+            display: flex;
+            align-items: center;
+            transition: background 0.2s ease, transform 0.1s ease;
+        }
+
+        .statement-btn:hover {
+            filter: brightness(1.12);
+            transform: translateY(-1px);
+        }
+
+        .statement-btn.correct {
+            outline: 2px solid #3DE8A3;
+            box-shadow: 0 0 10px rgba(61, 232, 163, 0.5);
+        }
+
+        .statement-btn.wrong {
+            outline: 2px solid #FF5C77;
+            box-shadow: 0 0 10px rgba(255, 92, 119, 0.5);
+        }
+
+        .statement-btn.dim-true {
+            opacity: 0.8;
+        }
+
+        .statement-btn.locked {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        .status.ok {
+            color: #3DE8A3 !important;
+        }
+
+        .status.err {
+            color: #FF5C77 !important;
+        }
+
+        .status.warn {
+            color: #FFB454 !important;
+        }
     </style>
 </head>
 
 <body>
+
+    <!-- ========== SUBSYSTEM 1 TEST UI ========== -->
     <div class="card">
         <h1>Lie Detective — Content Loader Test</h1>
         <p>Detective, load a case file to verify its structure.</p>
@@ -104,44 +160,110 @@
     </div>
 
 
-    <!-- Utilities & Loader -->
+
+    <!-- ========== SUBSYSTEM 2 — GAME SCREEN ========== -->
+    <section id="screen-game" class="screen">
+        <div class="card">
+
+            <h2 style="margin:0 0 8px 0;">
+                Case <span id="caseNo">000</span> —
+                <span id="packName">No Pack</span>
+            </h2>
+
+            <div class="hud" style="display:flex; gap:12px; align-items:center; margin:8px 0 12px;">
+                <div id="timer" style="flex:1;">
+                    <div id="timerTrack"
+                        style="position:relative; height:10px; background:#232833; border-radius:8px; overflow:hidden;">
+                        <div id="timerBar"
+                            style="position:absolute; left:0; top:0; bottom:0; width:100%; background:#4F8CFF; transform-origin:left center; transform:scaleX(1);">
+                        </div>
+                    </div>
+                    <div id="timerText" style="font-weight:600; color:#B4B8C5; margin-top:6px;">⏱ 8s</div>
+                </div>
+
+                <div class="stat" style="min-width:110px;">Score: <b id="scoreVal">0</b></div>
+                <div class="stat" style="min-width:110px;">Streak: <b id="streakVal">0</b></div>
+            </div>
+
+
+            <div id="statements" style="display:grid; gap:10px;">
+                <button class="statement-btn"></button>
+                <button class="statement-btn"></button>
+                <button class="statement-btn"></button>
+            </div>
+
+
+            <div class="controls" style="display:flex; gap:10px; margin-top:14px;">
+                <button id="btnStartSession">Start Session</button>
+                <button id="btnEndSession" style="background:#232833; color:#fff;">End</button>
+                <span id="statusMsg" class="status" style="margin-left:auto; color:#B4B8C5;">Ready.</span>
+            </div>
+
+
+            <div id="summary" hidden
+                style="margin-top:16px; background:#101726; border:1px solid #232833; border-radius:12px; padding:12px;">
+                <h3 style="margin-top:0;">Case Report</h3>
+                <pre id="summaryBody" style="white-space:pre-wrap; margin:0;"></pre>
+                <div style="margin-top:10px; display:flex; gap:10px;">
+                    <button id="btnSummaryRestart">Start New Session</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- ========== SCRIPT ORDER (CRITICAL) ========== -->
+
+
+    <!-- Utils -->
     <script src="./js/utils.js"></script>
+
+    <!-- Pack Loader -->
     <script src="./js/contentLoader.js"></script>
 
+    <!-- Game Engine -->
+    <script src="./js/game.js"></script>
 
-    <!-- Quick test script -->
+
+    <!-- Glue Code -->
     <script>
-        const statusEl = document.getElementById('status');
-        const outputEl = document.getElementById('output');
-        const selectEl = document.getElementById('packSelect');
-        const btn = document.getElementById('btnLoad');
+        (function () {
+            const selectEl = document.getElementById('packSelect');
+            const loadBtn = document.getElementById('btnLoad');
+            const startBtn = document.getElementById('btnStartSession');
 
-        btn.addEventListener('click', async () => {
-            const name = selectEl.value;
-            statusEl.textContent = 'Loading...';
-            outputEl.textContent = '(loading)';
+            let loadedPack = null;
 
-            try {
-                const pack = await ContentLoader.loadPack(name);
-                statusEl.innerHTML = `<span class="ok">OK</span> Loaded '${pack.packName}' with <b>${pack.items.length}</b> items.`;
-                const first = pack.items[0];
-                outputEl.textContent = JSON.stringify(first, null, 2);
-                console.log('[Test] First item:', first);
+            async function loadSelectedPack() {
+                const name = selectEl?.value || 'animals';
+                try {
+                    loadedPack = await ContentLoader.loadPack(name);
+                    console.log('[Game Test] Pack ready:', loadedPack.packName, loadedPack.items.length);
 
-                // extra: quick sanity check for ALL items
-                const bad = pack.items.filter((it) => {
-                    const c = it.statements.filter(s => s.truth === false).length;
-                    return c !== 1 || it.statements.length !== 3;
-                });
-                if (bad.length) {
-                    statusEl.innerHTML += ` <span class="err">Found ${bad.length} invalid items!</span>`;
+                    document.getElementById('packName').textContent = loadedPack.packName;
+                    document.getElementById('statusMsg').textContent =
+                        `Loaded '${loadedPack.packName}'. Press Start Session.`;
+                } catch (e) {
+                    console.error('[Game Test] Failed to load pack:', e);
                 }
-            } catch (err) {
-                statusEl.innerHTML = `<span class="err">Error</span> ${err?.message || err}`;
-                outputEl.textContent = '(error)';
             }
-        });
+
+            loadBtn?.addEventListener('click', loadSelectedPack);
+
+            startBtn?.addEventListener('click', () => {
+                if (!loadedPack) {
+                    loadSelectedPack().then(() => {
+                        if (loadedPack) GameEngine.startGame(loadedPack);
+                    });
+                } else {
+                    GameEngine.startGame(loadedPack);
+                }
+            });
+        })();
     </script>
+
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-# FINAL SUBSYSTEM 1 — BUILD CHECKLIST (What We Completed) #
+# FINAL SUBSYSTEM 1 — Game Content (JSON packs) BUILD CHECKLIST (What We Completed) #
 -----------------------------------------------------------------------------------
 # JSON Packs
 • Created 3 complete content packs: animals.json, celebrities.json, africa.json.
