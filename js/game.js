@@ -4,7 +4,7 @@
 
 (function () {
   // ====== CONFIG ======
-  const BASE_TIMER_MS = 8000;       // start of session
+  const BASE_TIMER_MS = 15000;       // start of session
   const MIN_TIMER_MS = 4000;        // lowest allowed
   const TIMER_STEP_MS = 250;        // decrease after each correct
   const TICK_MS = 100;              // timer update frequency
@@ -19,8 +19,8 @@
     if (streak >= 20) return 2.0;
     if (streak >= 15) return 1.75;
     if (streak >= 10) return 1.5;
-    if (streak >= 5)  return 1.25;
-    if (streak >= 3)  return 1.1;
+    if (streak >= 5) return 1.25;
+    if (streak >= 3) return 1.1;
     return 1.0;
   }
 
@@ -322,11 +322,27 @@
 
     const niceReason =
       reason === 'wrong' ? 'Incorrect selection'
-      : reason === 'timeout' ? 'Time ran out'
-      : 'Session ended';
+        : reason === 'timeout' ? 'Time ran out'
+          : 'Session ended';
 
     setStatus(`${niceReason}.`, reason === 'forfeit' ? 'warn' : 'err');
     showSummary(niceReason);
+
+    // Update player stats after game ends
+    const player = PlayerProfile.get();
+
+    player.stats.roundsPlayed += 1;
+    player.stats.lastPlayed = new Date().toISOString();
+
+    if (score > player.highScore) {
+      player.highScore = score;
+    }
+
+    if (streak > player.bestStreak) {
+      player.bestStreak = streak;
+    }
+
+    PlayerProfile.save(player);
   }
 
   // Updates the score and streak display

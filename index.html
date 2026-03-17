@@ -159,6 +159,25 @@
         <pre id="output">(nothing loaded yet)</pre>
     </div>
 
+    <!-- ========== SUBSYSTEM 3 — PROFILE UI ========== -->
+    <div class="card" style="margin-bottom:24px;">
+        <h2>Your Detective Profile</h2>
+
+        <label>Detective Name:</label><br>
+        <input id="profileName" type="text" placeholder="Detective Name"
+            style="width:100%; padding:10px; border-radius:8px; margin:6px 0; background:#101726; color:white; border:1px solid #232833;" />
+
+        <p style="margin-top:12px;">Best Score: <b id="profileHighScore">0</b></p>
+        <p>Best Streak: <b id="profileBestStreak">0</b></p>
+
+        <button id="btnResetProfile"
+            style="background:#FF5C77; color:white; margin-top:10px; padding:10px 14px; border-radius:10px;">
+            Reset Profile
+        </button>
+        <button id="profileLoad">Load Player Profile</button>
+        <button id="profileSave" style="margin-left:8px;">Save Profile</button>
+
+    </div>
 
 
     <!-- ========== SUBSYSTEM 2 — GAME SCREEN ========== -->
@@ -216,8 +235,7 @@
 
     <!-- ========== SCRIPT ORDER (CRITICAL) ========== -->
 
-
-    <!-- Utils -->
+    <!--utils -->
     <script src="./js/utils.js"></script>
 
     <!-- Pack Loader -->
@@ -226,6 +244,11 @@
     <!-- Game Engine -->
     <script src="./js/game.js"></script>
 
+    <!-- Storage (MUST come after game.js) -->
+    <script src="./js/storage.js"></script>
+
+    <!-- Main Profile Controller (MUST come after storage.js) -->
+    <script src="./js/main.js"></script>
 
     <!-- Glue Code -->
     <script>
